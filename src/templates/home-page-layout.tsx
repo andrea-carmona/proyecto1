@@ -4,17 +4,16 @@ import React from 'react'
 import { Container, Box, Typography, Paper, Grid } from '@mui/material';
 
 interface HomePageLayoutProps {
-    children: React.ReactNode;
+    children: React.ReactElement [];
 }
 
 function HomePageLayout({children}: HomePageLayoutProps) {
+  const [header, menu, container]= children
     return (
         <Box display="flex" flexDirection="column" minHeight="100vh">
         {/* Header */}
-        <Paper sx={{ padding: 2, backgroundColor: '#f5e5b3' }}>
-          <Typography variant="h4" component="header" align="center">
-            HEADER
-          </Typography>
+        <Paper >
+          {header}
         </Paper>
         {/* Main Content */}
         <Box flexGrow={1}>

@@ -1,0 +1,36 @@
+.search {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0 auto; // Centrar el contenedor de búsqueda
+  &:hover {
+    background-color: rgba(0,0,0,0.15);
+  }
+
+  .inputBase {
+    color: inherit;
+    align-items: center;
+    padding-left: 40px; // Ajustar según el tamaño del icono de búsqueda
+    width: 100%;
+    input {
+      padding: 8px 8px 8px 0;
+      width: 100%;
+    }
+  }
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.sectionDesktop {
+  display: flex;
+  justify-content: flex-end;
+  .MuiIconButton-root {
+    margin-left: 20px;
+  }
+}
+
+
