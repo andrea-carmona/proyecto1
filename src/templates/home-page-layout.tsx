@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import { Container, Box, Typography, Paper, Grid } from '@mui/material';
 
 interface HomePageLayoutProps {
@@ -8,7 +7,7 @@ interface HomePageLayoutProps {
 }
 
 function HomePageLayout({children}: HomePageLayoutProps) {
-  const [header, menu, container]= children
+  const [header, hero, menu, container]= children
     return (
         <Box display="flex" flexDirection="column" minHeight="100vh">
         {/* Header */}
@@ -20,15 +19,16 @@ function HomePageLayout({children}: HomePageLayoutProps) {
           {/* Main Image */}
           <Box
             sx={{
-              height: 200,
+              height: 300,
               backgroundColor: '#fff8e1',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               mt: 2
             }}
-          >
-            <Typography variant="h5">IMG</Typography>
+            
+            >
+            {hero} 
           </Box>
           {/* Container for Categories and Products */}
           <Container maxWidth="lg" sx={{ mt: 2, mb: 2 }}>
